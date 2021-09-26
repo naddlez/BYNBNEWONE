@@ -1,0 +1,719 @@
+@charset utf-8;
+/* CSS Document */
+
+
+*	{
+	margin:0;
+	padding:0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+img, div, a, a:hover { behavior:url(javascript/iepngfix.htc);
+}
+a	{color:#FFFF00;
+	text-decoration:none;
+	}
+h1	{
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	color: #0071BC;
+	font-size:24px;
+}
+	
+html, body	{
+	margin:0;
+	padding:0;
+	background-color:#DEE6EF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height:100%;
+	min-height:100%;
+}
+#container	{
+	width:1195px;
+	margin:0 auto;
+	background-color: #FFFFFF;
+	height: auto !important;
+	height:100%;
+	min-height:100%;
+	z-index: 0;
+	padding: 0;
+}
+#content	{
+	float:left;
+	width:1050px;
+	background-color:#FFF;
+}
+#header		{
+	background-image:url(images/header_logo.png);
+	width:1195px;
+	float:left;
+	background-repeat: no-repeat;
+	height: 145px;
+	background-position: top;
+	padding: 0;
+	margin: 0;
+	background-color: #FFFFFF;
+			}
+#footer, #pushfooter {
+	height: 85px;
+}
+#pushfooter
+{
+	margin: 0 0 -85px;
+	clear:both;
+}
+
+#footer	{
+	width: 100%;
+	background-color: #3DB2E4;
+	border-top: solid 10px #99CC00;
+	clear: both;
+}
+#content	{
+	width:1195px;
+	float: left;
+	height: 100%;
+	min-height: 100%;
+			}
+#text	{
+	float: left;
+	width: 900px;
+	font-size: 12px;
+	margin-left: 100px;
+	margin-top: 20px;
+	background-color: #FFFFFF;
+	margin-bottom: 5px;
+	}
+#navbar		{
+	width:1195px;
+	background-image: url(images/nav_bar.gif);
+	background-repeat: repeat-x;
+	float: left;
+			}
+#footcontent	{
+	width:1200px;
+	color: #FFF;
+	margin: auto;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin-bottom: 0px;
+				}
+				/* Based partially on Matthew Carroll's keyboard accessible flavor of Suckerfish 
+ * Dropdowns by Patrick Griffiths and Dan Webb. 
+ * http://carroll.org.uk/sandbox/suckerfish/bones2.html
+ */
+
+/* ----[ LINKS ]----*/
+
+/* all menu links */
+#nav_bar {
+	float:left;
+	position:relative;
+	padding:0;
+	height:50px;
+	margin:0;
+	z-index:9999;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	width: 100%;
+}
+
+
+
+
+			
+#nav .home a {
+	width:290px;
+	height:52px;
+	float:left;
+	background-repeat: no-repeat;
+			}
+#nav .aboutus a {
+	width:290px;
+	height:51px;
+	float:left;
+	background-repeat: no-repeat;
+	background-position:left;
+			}
+#nav .gallery a {
+	width:290px;
+	height:52px;
+	float:left;
+	background-repeat: no-repeat;
+			}
+#nav .contact a {
+	width:310px;
+	height:52px;
+	float:left;
+	background-repeat: no-repeat;
+			}
+#nav .home a:hover {
+}
+#nav .aboutus a:hover	{
+			}
+			
+#nav .gallery a:hover	{
+	
+}
+
+#nav a {
+	text-decoration:none;
+	display:block;
+	float:left;
+	padding:0;
+	height:50px;
+	margin-left:0px;
+}
+#subMenusContainer a {
+	text-decoration:none;
+	display:block;
+	width:250px;
+	height:30px;
+	line-height:20px;
+}
+/* Just main menu links --[for non-javascript users this applies to submenu links as well]*/
+#nav a {
+	margin:0;
+	float:left;
+}
+/* Just sub menu links */
+#subMenusContainer a, #nav li li a {
+	text-align:center;
+	font-size:15px;
+	overflow:hidden;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#333333;
+}
+/* All menu links on hover or focus */
+#nav a:hover, #nav a:focus, #subMenusContainer a:hover, #subMenusContainer a:focus, #nav a.mainMenuParentBtnFocused, #subMenusContainer a.subMenuParentBtnFocused {
+	color:#FFFF00;
+}
+
+#subMenusContainer .pricing a {
+	background-image:url(images/nav_bar.png);
+}
+#subMenusContainer .pricing a:hover {
+	background-image:url(images/nav_bar.png);
+}
+/* sub menu links on hover or focus */
+	
+/* sub menu links on hover or focus */
+
+
+
+/* Parent Sub Menu Links on hover or focus ---[javascript users only]*/
+.subMenuParentBtnFocused {
+	background: url(img/arrow_right_over.gif) right center no-repeat;
+}
+/* Parent Main Menu Links ---[javascript users only]*/
+.mainMenuParentBtn {
+	background: url(img/arrow_down.gif) right center no-repeat;
+}
+/* Parent Main Menu Links on hover or focus ---[javascript users only]*/
+.mainMenuParentBtnFocused {
+	background: url(img/arrow_down_over.gif) right center no-repeat;
+}
+/* ----[ OLs ULs, LIs, and DIVs ]----*/
+
+/* Submenu Outer Wrapper - each submenu is inside a div with this class - javascript users only */
+.smOW {
+	display:none;
+	position: absolute;
+	overflow:hidden;
+	/*the 2px left &amp; right padding lets you have a 1px border 
+	  on the ul or ol inside since overflow is set to hidden*/
+	padding:0;
+	margin:0;
+}
+/* All ULs and OLs */
+#nav, #nav ul, #nav ol, #subMenusContainer ul, #subMenusContainer ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1em;
+}
+/* All submenu OLs and ULs */
+#nav ol, #nav ul, #subMenusContainer ul, #subMenusContainer ol {
+	background-color:#FFFFCC;
+	left:0;
+}
+/* List items in main menu --[for non-javascript users this applies to submenus as well]  */
+#nav li {
+	/*great place to use a background image as a divider*/
+	display:block;
+	list-style:none;
+	position:relative;
+	float:left;
+}
+#subMenusContainer li {
+	list-style: none;
+}
+/* main menu ul or ol elment */
+#nav {
+	display:block;
+	list-style:none;
+	margin:0 0 0 0;
+	top:0px;
+	text-align: center;
+	display:block;
+	float: left;
+	padding: 0;
+	height: 50px;
+}
+#subMenusContainer {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:0;
+	overflow:visible;
+	z-index:1000000000;
+}
+/* --------------------------[ The below is just for non-javscript users ]--------------------------*/
+#nav li li {
+	float:none;
+}
+#nav li li a { /* Just submenu links*/
+	position:relative;
+	float:none;
+}
+#nav li ul { /* second-level lists */
+	position: absolute;
+	width: 10em;
+	margin-left: -1000em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+	margin-top:2.2em;
+}
+/* third-and-above-level lists */
+#nav li ul ul {
+	margin: -1em 0 0 -1000em;
+}
+#nav li:hover ul ul {
+	margin-left: -1000em;
+}
+/* lists nested under hovered list items */
+#nav li:hover ul {
+	margin-left: 0;
+}
+#nav li li:hover ul {
+	margin-left: 10em;
+	margin-top:-2.5em;
+}
+/* extra positioning rules for limited noscript keyboard accessibility */
+#nav li a:focus + ul {
+	margin-left: 0;
+	margin-top:2.2em;
+}
+#nav li li a:focus + ul {
+	left:0;
+	margin-left: 1010em;
+	margin-top:-2.2em;
+}
+#nav li li a:focus {
+	left:0;
+	margin-left:1000em;
+	width:10em;
+	margin-top:0;
+}
+#nav li li li a:focus {
+	left:0;
+	margin-left: 2010em;
+	width: 10em;
+	margin-top:-1em;
+}
+#nav li:hover a:focus {
+	margin-left: 0;
+}
+#nav li li:hover a:focus + ul {
+	margin-left: 10em;
+}
+
+
+#myGallery, #myGallerySet, #flickrGallery
+{
+	width: 667px;
+	height: 500px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:bold;
+	overflow: hidden;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jdGallery a
+{
+}
+
+#flickrGallery
+{
+	width: 888px;
+	height: 270px;
+}
+
+#myGallery img.thumbnail, #myGallerySet img.thumbnail
+{
+	display: none;
+}
+
+.jdGallery
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jdGallery img
+{
+	border: 0;
+	margin: 0;
+}
+
+.jdGallery .slideElement
+{
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('img/loading-bar-black.gif');
+}
+
+.jdGallery .loadingElement
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("img/loading-bar-black.gif");
+}
+
+.jdGallery .slideInfoZone
+{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	margin: 0px;
+	left: 0;
+	bottom: 0;
+	height: 20px;
+	background-color: #FFF;
+	color: #666;
+	text-indent: 0;
+	overflow: hidden;
+}
+
+* html .jdGallery .slideInfoZone
+{
+	bottom: -1px;
+}
+
+.jdGallery .slideInfoZone h2
+{
+	padding: 0;
+	font-size: 95%;
+	margin: 0;
+	margin: 2px 5px;
+	font-weight: bold;
+}
+
+.jdGallery .slideInfoZone p
+{
+	padding: 0;
+	font-size: 80%;
+	margin: 2px 5px;
+	color: #666;
+}
+
+.jdGallery div.carouselContainer
+{
+	position: absolute;
+	height: 138px;
+	width: 100%;
+	z-index: 10;
+	margin: 0px;
+}
+
+.jdGallery a.carouselBtn
+{
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+	height: 55px;
+	width: 200px; 
+	background-image:url(img/kookarrow_downT.png);
+	background-repeat:no-repeat;
+	text-align: center;
+	padding: 0;
+	font-size:12px;
+	color: #666;
+	cursor: pointer;
+}
+.jdGallery a.carouselBtn:hover 
+{
+	background-image: url(img/kookarrow_down.png);
+	background-repeat:no-repeat;
+}
+.jdGallery a.carouselBtn:visited 
+{
+	background-image: url(img/kookarrow_downT.png);
+	background-repeat:no-repeat;
+	}
+
+.jdGallery .carousel
+{
+	position: absolute;
+	width: 100%;
+	margin: 0px;
+	left: 0;
+	top: 0;
+	height: 115px;
+	background-color: #FFF;
+	color: #666;
+	text-indent: 0;
+	overflow: hidden;
+}
+
+.jdExtCarousel
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jdGallery .carousel .carouselWrapper, .jdExtCarousel .carouselWrapper
+{
+	position: absolute;
+	width: 100%;
+	height: 78px;
+	top: 10px;
+	left: 0;
+	overflow: hidden;
+}
+
+.jdGallery .carousel .carouselInner, .jdExtCarousel .carouselInner
+{
+	position: relative;
+}
+
+.jdGallery .carousel .carouselInner .thumbnail, .jdExtCarousel .carouselInner .thumbnail
+{
+	cursor: pointer;
+	background-color: #FFF;
+	color: #666;
+	background-position: center center;
+	float: left;
+}
+
+.jdGallery .wall .thumbnail, .jdExtCarousel .wall .thumbnail
+{
+	margin-bottom: 10px;
+}
+
+.jdGallery .carousel .label, .jdExtCarousel .label
+{
+	font-size:12px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	padding: 0;
+	margin: 0;
+}
+
+.jdGallery .carousel .wallButton, .jdExtCarousel .wallButton
+{
+	font-size: 12px;
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	padding: 1px 2px;
+	margin: 0;
+	background: #222;
+	cursor: pointer;
+}
+
+.jdGallery .carousel .label .number, .jdExtCarousel .label .number
+{
+	color: #b5b5b5;
+}
+
+.jdGallery a
+{
+	font-size: 100%;
+	text-decoration: none;
+}
+
+.jdGallery a.right, .jdGallery a.left
+{	position: absolute;
+	height: 99%;
+	width: 25%;
+	cursor: pointer;
+	z-index:10;
+}
+
+.jdGallery a.right:hover
+{
+	right: 0;
+	top: 0;
+	background-image:url(img/kookarrow_r.png);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+.jdGallery a.left:hover{
+	right: 0;
+	top: 0;
+	background-image:url(img/kookarrow_l.png);
+	background-repeat:no-repeat;
+	background-position:center left;
+	}
+.jdGallery a.left
+{
+	left: 0;
+	top: 0;	
+	background-image:url(img/kookarrow_lT.png);
+	background-repeat:no-repeat;
+	background-position:center left;
+}
+
+.jdGallery a.right
+{
+	right: 0;
+	top: 0;
+	background-image:url(img/kookarrow_rT.png);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+
+* html .jdGallery a.right { 
+background:url(img/kookarrow_r.png) no-repeat center right;
+}
+
+.jdGallery a.open
+{
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.withArrows a.open
+{
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 99%;
+	width: 50%;
+	cursor: pointer;
+	z-index: 10;
+	background: none;
+}
+
+.withArrows a.open:hover { }
+
+* html .withArrows a.open:hover { 
+ }
+	
+	
+/* Gallery Sets */
+
+.jdGallery a.gallerySelectorBtn
+{
+	z-index: 15;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	height: 20px;
+	/*width: 100px; background: url('img/carousel_btn.gif') no-repeat;*/
+	text-align: center;
+	padding: 0 10px;
+	font-size:18px;
+	background: #fff;
+	color: #666;
+	cursor: pointer;
+}
+
+.jdGallery .gallerySelector
+{
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.jdGallery .gallerySelector h2
+{
+	margin: 0;
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #666;
+	background-color: #FFF;
+}
+
+.jdGallery .gallerySelector .gallerySelectorWrapper
+{
+	overflow: hidden;
+}
+
+.jdGallery .gallerySelector .gallerySelectorInner div.galleryButton
+{
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	height: 40px;
+	color: #666;
+	cursor: pointer;
+	float: left;
+}
+
+.jdGallery .gallerySelector .gallerySelectorInner div.hover
+{
+	background-color: #FFF;
+}
+
+.jdGallery .gallerySelector .gallerySelectorInner div.galleryButton div.preview
+{
+	background-color: #FFF;
+	background-position: center center;
+	float: left;
+	border: none;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+
+.jdGallery .gallerySelector .gallerySelectorInner div.galleryButton h3
+{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.jdGallery .gallerySelector .gallerySelectorInner div.galleryButton p.info
+{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: normal;
+	color: #666;
+}
+table#BCgallery	{
+	background-color:#FFFFFF;
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
+}
+#BCgallery tr td	{
+	border: solid thin #DEE6EF;
+	}
+#function_info {
+	background-color:#FFFFFF;
+	width: 100%;
+}
+ul li {list-style-image:url(favicon.ico);}

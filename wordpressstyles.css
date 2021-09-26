@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@charset "UTF-8";
+/* CSS Document */
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+@viewport {
+	width: auto; // auto | device-width | length | percentage
+
+	// 'width' sets both max and min-width. It's a shorthand descriptor.
+	max-width: auto;
+	min-width: auto;
+
+	// 'zoom' equates to 'initial-scale' in meta tag.
+	// Values of 1.0 or 100% mean no zoom.
+	zoom: auto; // auto | number | percentage
+
+	max-zoom: 5; // Largest allowed zoom factor.
+	min-zoom: 0.25; // Smallest allowed zoom factor.
+
+	// Can the zoom factor be changed by user interaction?
+	// Equates to 'user-scalable' in meta tag.
+	user-zoom: zoom; // fixed | zoom
+
+	// Lock orientation or leave to auto.
+	orientation: auto; // auto | portrait | landscape
+
+}
+
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+  font-family: 'Kite One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kite One'), local('KiteOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/kiteone/v1/VNHoD96LpZ9rGZTwjozAOnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+h1, h2, h3 {
+	margin:20px 0;
+}
+ a {
+	text-decoration:none;
+	color:#777;
+}
+img {
+	border:none;
+}
+a:hover {
+	color: #33325B;
+}
+body {
+	font-family: 'Oswald', sans-serif;
+	background: rgb(245, 245, 245) url(../images/pattern.png) repeat;
+	color:#333;
+	text-align:justify;
+}
+#page {
+background:rgba(245, 245, 245, 0.7);
+
+	width:100%;
+	height:100%;	
+	float:left;
+}
+
+body {
+	width: 94%;
+max-width: 1280px;
+padding: 0 3%;
+	margin: 100px auto 0;
+	position: relative;
+	display:block;
+}
+#masthead, #main, #colophon {
+background:rgba(245, 245, 245, 0.5);
+
+	float:left;
+	width:100%;
+	padding:0 10px;
+	margin-top:0;
+}
+p {
+	font-family:'Kite One', sans-serif;
+	
+}
+
+#secondary {
+	background:url(../images/NadiaCartoon.png) no-repeat right;
+	float:right;
+	width:30%;
+	height:740px;
+	margin-top: -100px;
+	background-size: contain; 
+/* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+    -ms-behavior: url(/backgroundsize.min.htc);
+}
+
+ .site-title h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size:200px;
+	text-shadow: 3px 5px #ccc;
+	text-align:center;
+}
+ h6{
+	padding:10px 0;
+	font-family: 'Oswald', sans-serif;
+}
+#site-navigation {
+	margin-bottom: 0px;
+	position:fixed;
+	border-bottom:1px solid #ccc;
+	box-shadow:3px 1px #666;
+	height: 100px;
+	top: 0px;
+	background:rgba(245, 245, 245, 0.8);
+	left:0;
+	width:100%;
+	z-index:20;
+}
+header {
+	width:100%;
+	max-width:1280px;
+	margin:0 auto;
+}
+span.logo {
+	display:inline-block;
+	float:left;
+	width:50%;
+}
+
+#site-navigation ul {
+	float:right;
+	margin: 0 5px 0;
+	height:100px;
+}
+#site-navigation ul li{
+	list-style:none;
+	display:inline-block;
+	text-align:right;
+	color:#666;
+	text-shadow:1px 1px #fff;
+	font-size:18px;
+	text-decoration:none;
+	text-transform:uppercase;
+	margin-left:50px;
+	display:inline-block;
+	padding:25px 0;
+}
+ #site-navigation ul li a  {
+	color:#666;
+	text-shadow:1px 1px #fff;
+	font-size:18px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+#site-navigation li:hover{
+	cursor:pointer;
+	color: #a9d3d0;
+}
+
+#site-navigation .active{
+	cursor:pointer;
+	
+	font-weight:bold;
+	border-bottom:4px solid;
+	color:#46315D;
+}
+span.logo img {
+	margin:0;
+	float:left;
+	padding-top:3px;
+}
+ span.logo h3 {
+	text-transform:capitalize;
+	color:#666;
+	margin:0;
+	float:left;
+	text-shadow:1px 1px #fff;
+	padding:30px 0;
+}
